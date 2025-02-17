@@ -1,0 +1,10 @@
+# Base image using Node.js
+FROM node:18-alpine
+
+# Define an ONBUILD instruction that will be executed in child images
+ONBUILD COPY package.json /app/
+ONBUILD WORKDIR /app
+ONBUILD RUN echo "npm install"
+
+# Default command (optional, can be overridden by derived images)
+CMD ["node"]
