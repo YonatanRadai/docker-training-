@@ -6,4 +6,4 @@ COPY . /app
 WORKDIR /app
 
 # Set the entry point
-CMD ["node", "app.js"]
+CMD ["cat", "app.js"]
